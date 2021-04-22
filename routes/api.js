@@ -1,7 +1,7 @@
 const db = require('../models');
 const router = require('express').Router();
 
-//get workouts
+//Method for getting workouts from the api. 
 router.get("/api/workouts", (req, res) => {
 
     db.Workout.find({}).then(dbWorkout => {
@@ -20,4 +20,20 @@ router.get("/api/workouts", (req, res) => {
     }).catch(err => {
         res.json(err);
     });
+});
+// Method for adding a exercise from the workouts api using the workout id.
+router.put("/api/workouts/:id", (req, res) => {
+
+    db.Workout.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+            $inc: { totalDuration: req.body.duration },
+            $push: { exercises: req.body }
+        },
+        { new: true }).then(dbWorkout => {
+            res.json(dbWorkout);
+        }).catch(err => {
+            res.json(err);
+        });
+
 });
