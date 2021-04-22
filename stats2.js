@@ -231,10 +231,25 @@ const colors = generatePalette();
         workouts.push(exercise.name);
       });
     });
+
+
+
+    function workoutNames(data) {
+        let workouts = [];
+      
+        data.forEach(workout => {
+          workout.exercises.forEach(exercise => {
+            workouts.push(exercise.name);
+          });
+        });
+        
+        return workouts;
+      }
+
   
     // return de-duplicated array with JavaScript `Set` object
-    return [...new Set(workouts)];
+    // return [...new Set(workouts)];
   }
   
   // get all workout data from back-end
-  API.getWorkoutsInRange().then(populateChart);
+//   API.getWorkoutsInRange().then(populateChart);
