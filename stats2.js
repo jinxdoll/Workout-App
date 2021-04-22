@@ -211,23 +211,17 @@ const colors = generatePalette();
     return durations;
   }
   
-//   function calculateTotalWeight(data) {
-//     let totals = [];
+  function calculateTotalWeight(data) {
+    let total = [];
   
-//     data.forEach((workout) => {
-//       const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
-//         if (type === 'resistance') {
-//           return total + weight;
-//         } else {
-//           return total;
-//         }
-//       }, 0);
+    data.forEach(workout => {
+      workout.exercises.forEach(exercise => {
+        total.push(exercise.weight);
+      });
+    });
   
-//       totals.push(workoutTotal);
-//     });
-  
-//     return totals;
-//   }
+    return total;
+  }
   
   function workoutNames(data) {
     let workouts = [];
