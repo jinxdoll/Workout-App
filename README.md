@@ -30,7 +30,7 @@ Life can get busy as wel all know and having to keep track of your daily exercis
 
 ## Live Demo
 
-![Demo](https://user-images.githubusercontent.com/73260853/115766841-4895e080-a35d-11eb-8c35-bc93a6fbcdf7.mp4)
+![Site](https://user-images.githubusercontent.com/73260853/115771570-f9eb4500-a362-11eb-9c72-4ad28aa06e5f.mp4)
 
 ## Usage Instructions
 
@@ -44,19 +44,19 @@ npm run seed (note: Running seeders/seed.js is optional.)
 Application enabled using the following sources:
 
 - [JavaScript](https://www.javascript.com/)
-- [NPM (Express, generate-unique-ids)](https://www.npmjs.com/package/express)
-- [nodemon](https://www.npmjs.com/package/nodemon)
-- [mongoDB](https://www.mongodb.com)
+- [Express](https://www.npmjs.com/package/express)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [MongoDB](https://www.mongodb.com)
 
 -
 
 ## Deployment
 
-[Heroku](https://express-business-notetaker.herokuapp.com)
+[Heroku](https://workout-app-mongodb.herokuapp.com/)
 
 ### Author
 
-- [Aimee Mattson](https://jinxdoll.github.io/Express-small-business-notetaker)
+- [Aimee Mattson](https://jinxdoll.github.io/Workout-App/)
 - [Portfolio](https://jinxdoll.github.io/HW-2-portfolio-mattsonaimee/)
 - [LinkedIn](https://www.linkedin.com/in/aimee-mattson-bb060398/)
 
