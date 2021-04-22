@@ -42,34 +42,42 @@ const colors = generatePalette();
     let pie = document.querySelector('#canvas3').getContext('2d');
     let pie2 = document.querySelector('#canvas4').getContext('2d');
   
-    const daysOfWeek = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-    ];
+    // const daysOfWeek = [
+    //   'Sunday',
+    //   'Monday',
+    //   'Tuesday',
+    //   'Wednesday',
+    //   'Thursday',
+    //   'Friday',
+    //   'Saturday',
+    // ];
   
-    const labels = data.map(({ day }) => {
-      const date = new Date(day);
-      return daysOfWeek[date.getDay()];
-    });
+    // const labels = data.map(({ day }) => {
+    //   const date = new Date(day);
+    //   return daysOfWeek[date.getDay()];
+    // });
   
     let lineChart = new Chart(line, {
       type: 'line',
       data: {
-        labels,
+        labels: [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
         datasets: [
           {
-            label: 'Workout Duration In Minutes',
-            backgroundColor: 'red',
-            borderColor: 'red',
+            label: "Workout Duration In Minutes",
+            backgroundColor: "red",
+            borderColor: "red",
             data: durations,
-            fill: false,
-          },
-        ],
+            fill: false
+          }
+        ]
       },
       options: {
         responsive: true,
