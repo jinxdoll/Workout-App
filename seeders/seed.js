@@ -12,7 +12,7 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Bicep Curl",
+        name: "Bench Press",
         duration: 20,
         weight: 100,
         reps: 10,
@@ -25,7 +25,7 @@ let workoutSeed = [
     exercises: [
       {
         type: "resistance",
-        name: "Lateral Pull",
+        name: "Leg Press",
         duration: 20,
         weight: 300,
         reps: 10,
@@ -60,13 +60,11 @@ let workoutSeed = [
   {
     day: new Date().setDate(new Date().getDate()-6),
     exercises: [
-      {
-        type: "resistance",
-        name: "Bench Press",
-        duration: 20,
-        weight: 285,
-        reps: 10,
-        sets: 4
+     {
+        type: "cardio",
+        name: "Swimming",
+        duration: 25,
+        distance: 5
       }
     ]
   },
