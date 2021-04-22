@@ -37,3 +37,30 @@ router.put("/api/workouts/:id", (req, res) => {
         });
 
 });
+
+// Method for creating a new exercise and adding it to the Workout db. 
+router.post("/api/workouts", ({ body }, res) => {
+    console.log("Congrats, workout added" + body);
+
+    db.Workout.create(body).then((dbWorkout => {
+        res.json(dbWorkout);
+    })).catch(err => {
+        res.json(err);
+    });
+});
+
+// Method for getting all workouts within range from the Workout db.  
+router.get("/api/workouts/range", (req, res) => {
+
+    db.Workout.find({}).then(dbWorkout => {
+        console.log("Here are all teh workouts within range:" + dbWorkout);     
+
+        res.json(dbWorkout);
+    }).catch(err => {
+        res.json(err);
+    });
+
+});
+
+
+module.exports = router;
