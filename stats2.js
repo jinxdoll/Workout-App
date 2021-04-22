@@ -106,9 +106,17 @@ const colors = generatePalette();
     });
   
     let barChart = new Chart(bar, {
-      type: 'bar',
-      data: {
-        labels,
+        type: "bar",
+        data: {
+          labels: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
         datasets: [
           {
             label: 'Pounds',
@@ -190,24 +198,36 @@ const colors = generatePalette();
       },
     });
   }
+
+  function duration(data) {
+    let durations = [];
   
-  function calculateTotalWeight(data) {
-    let totals = [];
-  
-    data.forEach((workout) => {
-      const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
-        if (type === 'resistance') {
-          return total + weight;
-        } else {
-          return total;
-        }
-      }, 0);
-  
-      totals.push(workoutTotal);
+    data.forEach(workout => {
+      workout.exercises.forEach(exercise => {
+        durations.push(exercise.duration);
+      });
     });
   
-    return totals;
+    return durations;
   }
+  
+//   function calculateTotalWeight(data) {
+//     let totals = [];
+  
+//     data.forEach((workout) => {
+//       const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
+//         if (type === 'resistance') {
+//           return total + weight;
+//         } else {
+//           return total;
+//         }
+//       }, 0);
+  
+//       totals.push(workoutTotal);
+//     });
+  
+//     return totals;
+//   }
   
   function workoutNames(data) {
     let workouts = [];
