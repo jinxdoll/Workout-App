@@ -4,30 +4,37 @@ Workout App
 
 # Description
 
-As a user, I want to be able to view create and track daily workouts. The app will keep track of every exercise in your workout. The app dashboard will display weekly summary graphs of all workouts done in a week
+Life can get busy as wel all know and having to keep track of your daily exercise routine can be a pain. With this application, the user is able to track workout routines. The user can create, save and delete customized workouts.The app dashboard will display weekly summary graphs of all workouts done in a week as well as relative workout data.
 
 ## Table of contents
 
 - [Title](#title)
 - [Description](#description)
   - [Table of contents](#table-of-contents)
-- [Note Page](#note-page)
+- [Home Page View](#home-page-view)
+- [Dashboard View](#dashboard-view)
+- [Live Demo](#live-demo)
 - [Usage Instructions](#usage-instructions)
 - [Technologies](#technologies)
 - [Deployment](#deployment)
 - [Author](#author)
 - [Questions?](#questions)
 
-# Note Page
+# Home Page View
 
-![Homepage](https://github.com/jinxdoll/Express-small-business-notetaker/blob/main/public/assets/images/demo.png)
+![home-page](https://user-images.githubusercontent.com/73260853/115766567-f9e84680-a35c-11eb-94ab-9da9bdb9bb63.png)
+# Dashboard View
+![dashboard-page](https://user-images.githubusercontent.com/73260853/115766571-fb197380-a35c-11eb-91d9-3e7c14d2373f.png)
+
+# Live Demo
+![Demo](https://user-images.githubusercontent.com/73260853/115766841-4895e080-a35d-11eb-8c35-bc93a6fbcdf7.mp4)
 
 # Usage Instructions
 
 Application invoked by using the commands at the root folder:
 npm install
 node server.js
-npm run seed (note: Running seeders/seed.js is optional to have a prepopulated database.)
+npm run seed (note: Running seeders/seed.js is optional.)
 
 # Technologies
 
